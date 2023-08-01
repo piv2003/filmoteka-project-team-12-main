@@ -1,0 +1,269 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  transition: opacity $animations;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+}
+
+// Модалка
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+
+  padding: 48px 20px 40px;
+  background-color: #ffffff;
+  overflow: auto;
+  z-index: 10;
+  transition: transform $animations, opacity $animations;
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    width: 470px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 40px 36px;
+    width: 704px;
+    height: 552px;
+    overflow: inherit;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 40px 20px;
+    width: 806px;
+    height: 558px;
+  }
+}
+
+.btn-modal-close {
+  position: absolute;
+    padding: 0;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #ffffff;
+  border-radius: 50%;
+  border-color: transparent;
+  cursor: pointer;
+
+  transition: border $animations;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.text-box {
+  @media screen and (min-width: 480px) {
+    height: 420px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 370px;
+  }
+  color: $primary-text-color;
+}
+
+.img-modal {
+  width: 240px;
+  height: 357px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 265px;
+    height: 375px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: 0 auto;
+    width: 340px;
+    height: 478px;
+  }
+}
+.content-box {
+  @media screen and (min-width: 768px) {
+    margin-left: 68px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 16px;
+  }
+}
+.modal-title {
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 264px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 390px;
+    font-size: 30px;
+    line-height: calc(35 / 30);
+  }
+  color: $primary-text-color;
+}
+
+// таблица категорий фильма
+
+table {
+  border-spacing: 0px 8px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+  }
+}
+.tbody-category {
+  width: 140px;
+  padding-right: 60px;
+  color: $modal-grey-text-color;
+}
+
+.tbody {
+  @media screen and (min-width: 1280px) {
+    width: 370px;
+  }
+}
+.tbody-vote {
+  width: 12px;
+  text-align: center;
+  padding: 0px 8px;
+  line-height: 0.9;
+  color: $light-text-color;
+  background-color: $accent-color;
+  border-radius: 5px;
+}
+.tbody-slash {
+  text-align: center;
+  width: 20px;
+}
+.tbody-votes {
+  width: 25px;
+  text-align: center;
+}
+
+// описание фильма about
+.modal-subtitle {
+  font-size: 12px;
+
+  line-height: calc(16 / 12);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.textAbout {
+  min-width: 240px;
+  max-height: 236px;
+  font-size: 12px;
+  line-height: calc(20 / 12);
+  color: #000000;
+  overflow: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 320px;
+    max-height: 240px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 370px;
+    max-height: 160px;
+  }
+}
+.text-box {
+  margin-bottom: 20px;
+}
+
+// Кнопки модалки
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 10px;
+
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
+
+.btn-click-modal {
+  width: 110px;
+  height: 44px;
+  padding: 10px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 125px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 136px;
+  }
+
+  transition: color $animations, background-color $animations;
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+    background-color: $accent-color;
+    border: none;
+  }
+}

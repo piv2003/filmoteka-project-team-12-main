@@ -1,0 +1,135 @@
+.container--library {
+  position: relative;
+}
+.library_header {
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(
+   to right,
+   rgba(0, 0, 0, 0.56),
+  rgba(0, 0, 0, 0.56)),
+  url(../images/library-header/small.jpg);
+
+  @media screen and (min-width: 768px)  {
+    padding-top: 30px;
+   
+  }
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.56),
+    rgba(0, 0, 0, 0.56)
+    ),  url(../images/library-header/medium.jpg);
+  background-color: $footer-text-color;
+     
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library-header/large.jpg);
+  }
+  // margin-left: auto;
+  // margin-right: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.library_logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.library_logo_link{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.library_site-name {
+  
+  visibility: hidden;
+  
+  @media screen and (min-width: 768px) {
+    visibility: visible;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.17;
+    color: #FFFFFF;
+  }
+} 
+.library_header-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library_nav-list {
+  display: flex;
+  gap: 39px;
+  justify-content: end;
+}
+.library_nav-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.library_nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #FFFF;
+  
+}
+.library_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 45px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+    margin-top: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 16px;
+  }
+}
+
+.library_current:after {
+  content: ' ';
+    display: block;
+    margin-top: 1px;
+    width: 100%;
+    height: 3px;
+
+    background-color: $underline-color;
+}
+
+.library_logo, 
+.library_nav-link, .library_nav-item {
+  transition: scale $animations, color $animations;
+}
+
+.library_logo:hover, .library_logo:focus{
+   scale: 1.07;
+  
+}
+
+.library_nav-link:hover, .library_nav-link:focus{
+color: $accent-color;
+}
+
+.library_nav-item:hover, .library_nav-item:focus {
+  scale:1.2;
+  color: $accent-color;
+}
+
+.library_btn {
+transition: background-color $animations;
+}
+
+.library_btn:hover, .library_btn:focus {
+    background-color: $accent-color;      
+}

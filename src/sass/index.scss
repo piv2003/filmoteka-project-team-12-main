@@ -1,2 +1,20 @@
-@import './common';
-@import './example';
+@import './base/vars';
+@import './base/common';
+@import './base/container';
+@import './base/visually-hidden';
+@import './base/mixins';
+@import './components/buttons';
+@import './components/loader';
+@import './components/modal';
+@import './components/modal-footer';
+@import './components/film-card';
+@import './components/lightSwitch';
+@import './components/btn-up.scss';
+@import './layout/header-home';
+@import './layout/header-library';
+@import './layout/homeCatalog';
+@import './layout/libCatalog';
+@import './layout/pagination';
+@import './layout/footer';
+@import './layout/library-not-found';
+

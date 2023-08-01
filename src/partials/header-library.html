@@ -1,0 +1,60 @@
+<header class="library_header">
+  <div class="container container--library">
+    <div class="library_header-links">
+      <div class="library_logo">
+        <a href="./index.html" class="library_logo_link">
+          <img
+            class="library_logo-img"
+            src="./images/film.svg"
+            alt="logo"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a class="library_site-name" href="./index.html">Filmoteka</a>
+      </div>
+
+      <ul class="library_nav-list">
+        <li class="library_nav-item">
+          <a class="library_nav-link" href="./index.html">HOME</a>
+        </li>
+        <li class="library_nav-item">
+          <a class="library_nav-link library_current" href="./library.html"
+            >MY LIBRARY</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <ul class="library_buttons">
+      <li>
+        <button
+          id="watched-btn"
+          class="library_btn library_btn--active"
+          aria-label="watched films"
+          type="button"
+          data-watch
+        >
+          WATCHED
+        </button>
+      </li>
+      <li>
+        <button
+          id="queue-btn"
+          type="button"
+          class="library_btn"
+          aria-label="films in a queue"
+          data-queue
+        >
+          QUEUE
+        </button>
+      </li>
+    </ul>
+    <div class="theme__switch-wrapper__library">
+      <label class="theme__switch">
+        <input type="checkbox" class="day-night-switch" />
+        <span class="slider slider__library round"></span>
+      </label>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,156 @@
+.theme__switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  @media screen and (max-width: 767px) {
+    right: 30px;
+    top: 190px;
+  }
+
+  @media screen and (min-width: 768px) {
+    right: 85px;
+    top: 175px;
+  }
+}
+
+.theme__switch-wrapper__library {
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  @media screen and (max-width: 767px) {
+    right: 30px;
+    top: 160px;
+  }
+
+  @media screen and (min-width: 768px) {
+    right: 85px;
+    top: 145px;
+  }
+}
+
+.theme__switch-wrapper span,
+.theme__switch-wrapper__library span {
+  margin-right: 10px;
+  font-size: 1rem;
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+  }
+}
+
+.theme__switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 54px;
+}
+
+.theme__switch input {
+  display: none;
+}
+
+.slider {
+  background: $body-main-color;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: $modal-grey-text-color;
+  bottom: 4px;
+  content: '';
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+
+// .slider__library::before {
+//   @media screen and (min-width: 768px) {
+//     left: 10px;
+//   }
+// }
+
+input:checked + .slider {
+  background: $accent-color;
+}
+
+input:checked + .slider::before {
+  @media screen and (min-width: 768px) {
+    transform: translateX(16px);
+  }
+}
+
+.slider.round {
+  border-radius: 34px;
+  @media screen and (max-width: 767px) {
+    width: 28px;
+  }
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+body.dark__theme {
+  background-color: $background-dark-theme;
+  color: $light-text-color;
+  background-size: 1500px;
+
+
+  #pagination .tui-page-btn {
+    color: $body-main-color;
+
+  }
+
+  #pagination .tui-is-disabled .tui-prev {
+    background-color: inherit;
+
+
+  }
+
+  #pagination .tui-prev {
+    background-color: $color__pagination--accent;
+  }
+
+  #pagination .tui-next {
+    background-color: $color__pagination--accent;
+  }
+
+  #pagination .tui-is-disabled .tui-next {
+    background-color: inherit;
+
+  }
+}
+
+body.dark__theme header,
+body.dark__theme footer {
+  box-shadow: 0px 1px 58px 12px rgba(255, 85, 0, 0.7),
+    1px 2px 4px 0px rgba(255, 85, 0, 0.7), 2px 4px 8px 0px rgba(255, 85, 0, 0.7),
+    2px 4px 16px 0px rgba(255, 85, 0, 0.7);
+}
+
+.footer__dark-theme {
+  height: 100px;
+  padding-top: 28px;
+
+  @include tablet {
+    height: 79px;
+  }
+
+  @include desktop {
+    height: 77px;
+  }
+  background-color: rgb(44, 43, 43);
+}
+
+.footer-paragraph__dark-theme {
+  color: $light-text-color;
+}

@@ -1,0 +1,32 @@
+.library_not-found-text {
+  // color: rgba(39, 37, 37, 0.888);
+  font-size: 22px;
+}
+
+.not-found_container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img_not-found {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link_to-home {
+  text-decoration: underline;
+  color: $accent-color;
+}
+
+.link_to-home:hover,
+.link_to-home:focus {
+  color: rgb(147, 147, 147);
+}
+
+.films-catalog {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
