@@ -37,7 +37,7 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
-  color: #000000;
+  color: #000;
   background-color: #ffffff;
 }
 
@@ -196,7 +196,7 @@ main {
   content: "";
   width: 75px;
   height: 75px;
-  border: 15px solid #000000;
+  border: 15px solid #000;
   border-bottom-color: #ff6b08;
   border-radius: 50%;
   -webkit-animation: loading 0.75s ease infinite;
@@ -416,7 +416,7 @@ table {
   max-height: 236px;
   font-size: 12px;
   line-height: 1.6666666667;
-  color: #000000;
+  color: #000;
   overflow: auto;
 }
 @media screen and (min-width: 768px) {
@@ -685,7 +685,7 @@ table {
   font-size: 12px;
   line-height: 1.33;
   text-transform: uppercase;
-  color: #000000;
+  color: #000;
 }
 @media screen and (min-width: 1280px) {
   .film-card__title {
